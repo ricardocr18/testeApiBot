@@ -3,16 +3,23 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-    res.send('Teste de API no Heroku GET !!!')
+let db = "Tudo OK no Teste"
 
-    
+//buscar dados
+app.get('/', (req, res) => {
+    return res.json(db)
 })
 
-app.post('/apipost', (req, res) => {
-    res.send('Teste de API no Heroku POST!!!')
+//inserir dados
+app.post('/teste', (req, res) => {
+    return res.json(db)
+    // const body = req.body
 
-    
+    // if (!body)
+    //     return res.status(400).end()
+
+    // db.push(body)
+    // return res.json(body)
 })
 
 
