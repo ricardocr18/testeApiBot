@@ -1,0 +1,23 @@
+{
+  "name": "testeapibot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardocr18/testeApiBot.git"
+  },
+  "author": "Ricardo C. Ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardocr18/testeApiBot/issues"
+  },
+  "homepage": "https://github.com/ricardocr18/testeApiBot#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
