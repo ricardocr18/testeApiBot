@@ -13,7 +13,6 @@ let inbenta = {
     
 }
 
-
 //buscar dadoss
 app.get('/', (req, res) => {
     return res.json(db)
