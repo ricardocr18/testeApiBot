@@ -3,9 +3,10 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-let db = "Tudo OK no Teste 100%"
+let db = "Tudo OK no Teste 10%"
+let inbenta = "oi"
 
-//buscar dados
+//buscar dadoss
 app.get('/', (req, res) => {
     return res.json(db)
 })
@@ -13,7 +14,7 @@ app.get('/', (req, res) => {
 //inserir dados
 app.post('/teste', (req, res) => {
 
-    return json.dumps(
+    return res.send(JSON.stringify(
         {
             "status": "success",
             "chatbot_response": db,
@@ -24,7 +25,7 @@ app.post('/teste', (req, res) => {
                 }
             ]
         }
-        , indent = 3)
+        , indent = 3))
 
 
 })
