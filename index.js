@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 3000
 
 let db = "Tudo OK no Teste 40%"
 
@@ -27,6 +27,6 @@ app.post('/teste', (req, res) => {
 }),
 
 
-app.listen(3001, () => {
+app.listen(3000, () => {
     console.log('Teste API no Heroku')
 })
