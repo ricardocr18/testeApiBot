@@ -3,7 +3,7 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-let db = "Tudo OK no Teste"
+let db = "Tudo OK no Teste 100%"
 
 //buscar dados
 app.get('/', (req, res) => {
@@ -12,16 +12,22 @@ app.get('/', (req, res) => {
 
 //inserir dados
 app.post('/teste', (req, res) => {
-    return res.json(db)
-    // const body = req.body
 
-    // if (!body)
-    //     return res.status(400).end()
+    return json.dumps(
+        {
+            "status": "success",
+            "chatbot_response": db,
+            "raw_output": [
+                {
+                    "output_variable": "tipopizza",
+                    "output_result": "Fluzão Campeão"
+                }
+            ]
+        }
+        , indent = 3)
 
-    // db.push(body)
-    // return res.json(body)
+
 })
-
 
 app.listen(port, () => {
     console.log('Teste API no Heroku')
