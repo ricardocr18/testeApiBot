@@ -1,35 +1,26 @@
+//Arquivo backp do dia 25/02/2022 as 16:22
 const express = require('express');
-const app = express();
-//const txtEmail = document.getElementById('opcao_pizza')
+const app = express()
 
 const port = process.env.PORT || 3000
 
-//let db = ""
+let db = ""
 let novopedidopizza = "Não";
 let totalDepedido = 0;
 let totalDeConsume = 0;
 let opcao = ""
-//let sabor = ''
-
-db = [
-    {
-        'Pedido': totalDepedido,
-        'Consumo': totalDeConsume,
-    }
-]
 
 
-if (novopedidopizza == 'Sim') {
+if(novopedidopizza == 'Sim'){
     db = "Novo Pedido"
     totalDepedido = 2
     totalDeConsume = 40
     opcao = novopedidopizza
-} else {
-    //db = "Escolha Bebida"   
+}else {
+    db = "Escolha Bebida"
     totalDepedido = 1
     totalDeConsume = 20
     opcao = novopedidopizza
-
 }
 
 //buscar dadoss
@@ -40,7 +31,7 @@ app.get('/', (req, res) => {
 //inserir dados
 app.post('/teste', (req, res) => {
 
-    res.send(JSON.stringify(inbenta))
+    res.send(JSON.stringify( inbenta ))
     return
 })
 
@@ -55,14 +46,14 @@ let inbenta = {
         },
         {
             "output_variable": "totalDeConsume",
-            "output_result": totalDeConsume
+            "output_result":  totalDeConsume
         },
         {
             "output_variable": "opcao",
             "output_result": opcao
         }
     ]
-
+    
 }
 
 app.listen(port, () => {
