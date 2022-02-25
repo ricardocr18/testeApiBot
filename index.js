@@ -30,15 +30,13 @@ app.get('/', (req, res) => {
 }) */
 
 // buscar dadoss
-app.get('/', (req, res) => {
-     teste = req.body
-        
-}) 
+app.get('/teste', function (req, res) {
+    console.log(req.params.borda); //Jose
+  });
 
 
 //inserir dados
 app.post('/teste', (req, res) => {
-    opcao = req.body.borda
     res.send(JSON.stringify(inbenta))
     return
 })
