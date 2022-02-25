@@ -4,19 +4,11 @@ const app = express();
 
 const port = process.env.PORT || 3000
 
-//let db = ""
+let db = ""
 let novopedidopizza = "Não";
 let totalDepedido = 0;
 let totalDeConsume = 0;
 let opcao = ""
-//let sabor = ''
-
-db = [
-    {
-        'Pedido': totalDepedido,
-        'Consumo': totalDeConsume,
-    }
-]
 
 
 if (novopedidopizza == 'Sim') {
@@ -25,7 +17,7 @@ if (novopedidopizza == 'Sim') {
     totalDeConsume = 40
     opcao = novopedidopizza
 } else {
-    //db = "Escolha Bebida"   
+    db = "Segue seu pedido"   
     totalDepedido = 1
     totalDeConsume = 20
     opcao = novopedidopizza
