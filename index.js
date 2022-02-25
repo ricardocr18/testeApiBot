@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const bodyParser = require ('body-parser')
 //const txtEmail = document.getElementById('opcao_pizza')
 
 const port = process.env.PORT || 3000
@@ -10,7 +11,6 @@ let totalDepedido = 0;
 let totalDeConsume = 0;
 let opcao = ""
 
-
 if (novopedidopizza == 'Sim') {
     db = "Novo Pedido"
     totalDepedido = 2
@@ -20,14 +20,21 @@ if (novopedidopizza == 'Sim') {
     db = "Segue seu pedido"   
     totalDepedido = 1
     totalDeConsume = 20
-    opcao = novopedidopizza
+    
 
 }
 
-//buscar dadoss
+/* buscar dadoss
 app.get('/', (req, res) => {
     return res.json(db)
-})
+}) */
+
+// buscar dadoss
+app.get('/teste', (req, res) => {
+     opcao = req.body
+        
+}) 
+
 
 //inserir dados
 app.post('/teste', (req, res) => {
