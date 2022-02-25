@@ -31,14 +31,14 @@ app.get('/', (req, res) => {
 
 // buscar dadoss
 app.get('/teste', (req, res) => {
-     opcao = req.body
+     teste = req.body.data
         
 }) 
 
 
 //inserir dados
 app.post('/teste', (req, res) => {
-
+    opcao = req.body.data
     res.send(JSON.stringify(inbenta))
     return
 })
