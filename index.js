@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 
 //buscar dadoss
 app.get('/teste', (req, res) => {
-    console.log(req.body) 
+    console.log(req.params.borda)
   });
 
 
@@ -43,7 +43,7 @@ app.get('/teste', (req, res) => {
 app.post('/teste', (req, res) => {
     res.send(JSON.stringify(inbenta))    
     
-    opcao = req.body;  
+    console.log(req.body.data.opcao_pizza) 
          
 })
 
