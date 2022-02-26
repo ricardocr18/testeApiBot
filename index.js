@@ -49,7 +49,7 @@ app.post('/teste', (req, res) => {
         //console.log("errado")
         app.get('/teste', (req, res) => {
             //trocar status e responder json
-            res.json(opcao)
+            res.send(opcao)
         });
     }
 
