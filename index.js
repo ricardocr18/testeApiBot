@@ -20,7 +20,7 @@ if (novopedidopizza == 'Sim') {
     totalDeConsume = 40
     opcao = novopedidopizza
 } else {
-    db = "Segue seu pedido"   
+    db = "Bora API"   
     totalDepedido = 1
     totalDeConsume = 20
     
@@ -40,10 +40,8 @@ app.get('/teste', function (req, res) {
 
 //inserir dados
 app.post('/teste', (req, res) => {
-    res.send(JSON.stringify(inbenta))
-
-    const correa = req.body
-    console.log(correa)       
+    res.send(JSON.stringify(inbenta))    
+    console.log(req.body)       
 })
 
 
