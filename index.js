@@ -44,7 +44,7 @@ app.post('/teste', (req, res) => {
     opcao = (req.body.borda)
 
     if(opcao == 'Ricar'){
-        console.log('amor')
+        console.log('Acertou')
     } else {
         //console.log("errado")
         app.get('/teste', (req, res) => {
