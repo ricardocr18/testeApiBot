@@ -1,6 +1,9 @@
 const express = require('express');
+const bodyParser = require ('body-parser');
+
 const app = express();
-const bodyParser = require ('body-parser')
+app.use(bodyParser.json())
+
 //const txtEmail = document.getElementById('opcao_pizza')
 
 const port = process.env.PORT || 3000
@@ -31,13 +34,14 @@ app.get('/', (req, res) => {
 
 // buscar dadoss
 app.get('/teste', function (req, res) {
-    console.log(req.params.borda); //Jose
+    res(req.params.borda); //Jose
   });
 
 
 //inserir dados
 app.post('/teste', (req, res) => {
     res.send(JSON.stringify(inbenta))
+    console.log(req.body)
     return
 })
 
