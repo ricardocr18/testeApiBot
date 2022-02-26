@@ -43,11 +43,8 @@ app.get('/teste', (req, res) => {
 app.post('/teste', (req, res) => {
     res.send(JSON.stringify(inbenta))    
     
-    var data = req.body;
-  
-  console.log("Name: ", data.borda);
- 
-        
+    opcao = req.body;  
+         
 })
 
 
