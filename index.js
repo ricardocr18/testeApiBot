@@ -43,7 +43,7 @@ app.get('/teste', (req, res) => {
 app.post('/teste', (req, res) => {
     res.send(JSON.stringify(inbenta))    
     
-    console.log(req.body.data.opcao_pizza) 
+    console.log(req.opcao_pizza) 
          
 })
 
