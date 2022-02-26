@@ -42,13 +42,8 @@ app.get('/teste', function (req, res) {
 app.post('/teste', (req, res) => {
     res.send(JSON.stringify(inbenta))
 
-    const correa = req.body.borda
-    console.log(correa)
-
-    return res.status(200).send({
-        opcao: correa
-    })
-    
+    const correa = req.body
+    console.log(correa)       
 })
 
 
