@@ -3,6 +3,7 @@ const bodyParser = require ('body-parser');
 
 const app = express();
 app.use(bodyParser.json())
+app.use(express.urlencoded({ extended: true }));
 
 //const txtEmail = document.getElementById('opcao_pizza')
 
@@ -41,7 +42,8 @@ app.get('/teste', (req, res) => {
 //inserir dados
 app.post('/teste', (req, res) => {
     res.send(JSON.stringify(inbenta))    
-    console.log(req.body.data)       
+    console.log(req.body);
+    res.send();    
 })
 
 
