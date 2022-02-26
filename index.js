@@ -32,16 +32,16 @@ app.get('/', (req, res) => {
     return res.json(db)
 }) */
 
-/* buscar dadoss
-app.get('/teste', function (req, res) {
-    res(req.params.borda); //Jose
+//buscar dadoss
+app.get('/teste', (req, res) => {
+    console.log(req.body.borda) 
   });
-*/
+
 
 //inserir dados
 app.post('/teste', (req, res) => {
     res.send(JSON.stringify(inbenta))    
-    console.log(req.body)       
+    console.log(req.body.data)       
 })
 
 
