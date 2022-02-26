@@ -42,7 +42,11 @@ app.get('/teste', (req, res) => {
 //inserir dados
 app.post('/teste', (req, res) => {
     res.send(JSON.stringify(inbenta))    
-    console.log(req.body.opcao_pizza);
+    
+    var data = req.body;
+  
+  console.log("Name: ", data.borda);
+ 
         
 })
 
