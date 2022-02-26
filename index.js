@@ -32,17 +32,28 @@ app.get('/', (req, res) => {
     return res.json(db)
 }) */
 
-// buscar dadoss
+/* buscar dadoss
 app.get('/teste', function (req, res) {
     res(req.params.borda); //Jose
   });
-
+*/
 
 //inserir dados
 app.post('/teste', (req, res) => {
     res.send(JSON.stringify(inbenta))
-    opcao = req.body
-    return
+    opcao = (req.body)
+
+    if(opcao == 'Ricar'){
+        console.log('amor')
+    } else {
+        //console.log("errado")
+        app.get('/teste', (req, res) => {
+            //trocar status e responder json
+            res.json(opcao)
+        });
+    }
+
+    
 })
 
 
