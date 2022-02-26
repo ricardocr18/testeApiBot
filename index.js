@@ -41,7 +41,7 @@ app.get('/teste', function (req, res) {
 //inserir dados
 app.post('/teste', (req, res) => {
     res.send(JSON.stringify(inbenta))
-    opcao = (req.body)
+    opcao = (req.body.borda)
 
     if(opcao == 'Ricar'){
         console.log('amor')
