@@ -35,15 +35,15 @@ app.get('/', (req, res) => {
 
 //buscar dadoss
 app.get('/teste', (req, res) => {
-    console.log(req.body.borda) 
+    console.log(req.body) 
   });
 
 
 //inserir dados
 app.post('/teste', (req, res) => {
     res.send(JSON.stringify(inbenta))    
-    console.log(req.body);
-    res.send();    
+    console.log(req.body.opcao_pizza);
+        
 })
 
 
