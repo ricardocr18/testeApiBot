@@ -41,18 +41,13 @@ app.get('/teste', function (req, res) {
 //inserir dados
 app.post('/teste', (req, res) => {
     res.send(JSON.stringify(inbenta))
-    opcao = (req.body.borda)
 
-    if(opcao == 'Ricar'){
-        console.log('Acertou')
-    } else {
-        //console.log("errado")
-        app.get('/teste', (req, res) => {
-            //trocar status e responder json
-            res.send(opcao)
-        });
-    }
+    const correa = req.body.borda
+    console.log(correa)
 
+    return res.status(200).send({
+        opcao: correa
+    })
     
 })
 
