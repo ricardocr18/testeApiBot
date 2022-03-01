@@ -1,11 +1,11 @@
 const express = require('express');
-const bodyParser = require ('body-parser');
+//const bodyParser = require ('body-parser');
 
 const app = express();
-app.use(bodyParser.json())
-app.use(express.urlencoded({ extended: true }));
+//app.use(bodyParser.json())
 
-//const txtEmail = document.getElementById('opcao_pizza')
+app.use(express.json()) //Aqui eu pego as informações no corpo da requisição
+app.use(express.urlencoded({ extended: true })) // Aqui eu pego as informsações pela URL
 
 const port = process.env.PORT || 3000
 
@@ -33,6 +33,7 @@ app.get('/', (req, res) => {
     return res.json(db)
 }) */
 
+/*
 //buscar dadoss
 app.get('/teste', (req, res) => {
     console.log(req.bodyParser)
@@ -45,6 +46,19 @@ app.post('/teste', (req, res) => {
     
     console.log(req.body) 
          
+})
+*/
+
+//buscar dadoss
+app.get('/', (req, res) => {
+    return res.json(db)
+})
+
+//inserir dados
+app.post('/teste', (req, res) => {
+    console.log(req.body)
+    res.send(JSON.stringify( inbenta ))
+    return
 })
 
 
