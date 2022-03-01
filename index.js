@@ -57,7 +57,7 @@ app.get('/', (req, res) => {
 //inserir dados
 app.post('/teste', (req, res) => {
     res.send(JSON.stringify( inbenta ))
-    console.log(req.body.data)
+    console.log(req.body)
     
     
 })
