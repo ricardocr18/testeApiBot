@@ -47,9 +47,10 @@ app.post('/teste', (req, res) => {
             totalDeConsume = 1
             opcao = req.body.opcao_pizza
         }
+        return correa(totalDepedido)
     } 
 
-    console.log(correa())
+    console.log(correa("Total de Pedidos: " + totalDepedido))
 })
 
 let inbenta = { 
