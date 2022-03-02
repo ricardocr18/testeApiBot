@@ -15,6 +15,18 @@ let db = ""
     let totalDeConsume = 0;
     let opcao = ""
 
+    if (novopedidopizza == 'Sim') {
+        db = "Bora API Sim"
+        totalDepedido = 2
+        totalDeConsume = 40
+        opcao = novopedidopizza
+    } else {
+        db = "Bora API DEu Certo"
+        totalDepedido = 1
+        totalDeConsume = 20
+        opcao = novopedidopizza
+    }
+
 
 // if (novopedidopizza == 'Sim') {
 //     db = "Novo Pedido"
@@ -34,21 +46,10 @@ app.get('/', (req, res) => {
 
 //inserir dados
 app.post('/teste', (req, res) => {
-    console.log(req.body)
+    console.log(req.body.novopedidopizza)
     res.send(JSON.stringify(inbenta))
 
-    
-    if (novopedidopizza == 'Sim') {
-        db = "Bora API Sim"
-        totalDepedido = 2
-        totalDeConsume = 40
-        opcao = novopedidopizza
-    } else {
-        db = "Bora API DEu Certo"
-        totalDepedido = 1
-        totalDeConsume = 20
-        opcao = novopedidopizza
-    }
+        
 
     let inbenta = {
         "status": "success",
