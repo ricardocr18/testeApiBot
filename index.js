@@ -9,23 +9,23 @@ app.use(express.urlencoded({ extended: true })) // Aqui eu pego as informsaçõe
 
 const port = process.env.PORT || 3000
 
-// let db = ""
-// let novopedidopizza = "";
-// let totalDepedido = 0;
-// let totalDeConsume = 0;
-// let opcao = ""
+let db = ""
+let novopedidopizza = "";
+let totalDepedido = 0;
+let totalDeConsume = 0;
+let opcao = ""
 
 
-// if (novopedidopizza == 'Sim') {
-//     db = "Novo Pedido"
-//     totalDepedido = 2
-//     totalDeConsume = 40
-//     opcao = novopedidopizza
-// } else {
-//     db = "Bora API"   
-//     totalDepedido = 1
-//     totalDeConsume = 20    
-// }
+if (novopedidopizza == 'Sim') {
+    db = "Novo Pedido"
+    totalDepedido = 2
+    totalDeConsume = 40
+    opcao = novopedidopizza
+} else {
+    db = "Bora API"   
+    totalDepedido = 1
+    totalDeConsume = 20    
+}
 
 //buscar dadoss
 app.get('/', (req, res) => {
