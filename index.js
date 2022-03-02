@@ -1,8 +1,8 @@
-const express = require('express');
 //const bodyParser = require ('body-parser');
-
-const app = express();
 //app.use(bodyParser.json())
+
+const express = require('express');
+const app = express();
 
 app.use(express.json()) //Aqui eu pego as informações no corpo da requisição
 app.use(express.urlencoded({ extended: true })) // Aqui eu pego as informsações pela URL
@@ -23,44 +23,21 @@ if (novopedidopizza == 'Sim') {
 } else {
     db = "Bora API"   
     totalDepedido = 1
-    totalDeConsume = 20
-    
-
+    totalDeConsume = 20    
 }
 
-/* buscar dadoss
+//buscar dadoss
 app.get('/', (req, res) => {
     return res.json(db)
-}) */
-
-/*
-//buscar dadoss
-app.get('/teste', (req, res) => {
-    console.log(req.bodyParser)
-  });
-
+})
 
 //inserir dados
 app.post('/teste', (req, res) => {
-    res.send(JSON.stringify(inbenta))    
-    
     console.log(req.body) 
-         
-})
-*/
-
-//buscar dadoss
-app.get('/', (req, res) => {
-    return res.json(db)
-})
-
-//inserir dados
-app.post('/teste', (req, res) => {
-    res.send(JSON.stringify( inbenta ))
+    res.send(JSON.stringify( inbenta ))  
     
     
 })
-
 
 let inbenta = {
     "status": "success",
