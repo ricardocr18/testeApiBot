@@ -16,16 +16,16 @@ let totalDeConsume = 0;
 let opcao = ""
 
 
-// if (novopedidopizza == 'Sim') {
-//     db = "Novo Pedido"
-//     totalDepedido = 2
-//     totalDeConsume = 40
-//     opcao = novopedidopizza
-// } else {
-//     db = "Bora API"   
-//     totalDepedido = 1
-//     totalDeConsume = 20    
-// }
+if (novopedidopizza == 'Sim') {
+    db = "Novo Pedido"
+    totalDepedido = 2
+    totalDeConsume = 40
+    opcao = novopedidopizza
+} else {
+    db = "Bora API"   
+    totalDepedido = 1
+    totalDeConsume = 20    
+}
 
 //buscar dadoss
 app.get('/', (req, res) => {
@@ -36,21 +36,6 @@ app.get('/', (req, res) => {
 app.post('/teste', (req, res) => {
     console.log("Aqui é uma variavel: " + (req.body.opcao_pizza))
     res.send(JSON.stringify(inbenta)) 
-    
-    function correa () {
-        if (req.body.opcao_pizza = "Camarão") {
-            totalDepedido = 1
-            totalDeConsume = 1
-            opcao = req.body.opcao_pizza
-        } else {
-            totalDepedido = 1
-            totalDeConsume = 1
-            opcao = req.body.opcao_pizza
-        }
-        return correa(totalDepedido)
-    } 
-
-    console.log(correa("Total de Pedidos: " + totalDepedido))
 })
 
 let inbenta = { 
@@ -71,9 +56,6 @@ let inbenta = {
         }
     ]
 }        
-
-
-
 
 app.listen(port, () => {
     console.log('Teste API no Heroku')
