@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 //inserir dados
 app.post('/teste', (req, res) => {
     console.log("Aqui é uma variavel: " + (req.body.opcao_pizza))
-    res.send(JSON.stringify(inbenta)) 
+     
 
     opcao = (req.body.opcao_pizza)
 
@@ -56,7 +56,9 @@ app.post('/teste', (req, res) => {
                 "output_result": opcao
             }
         ]
-    }        
+    }  
+    
+    res.send(JSON.stringify(inbenta))
 })
 
 // let inbenta = { 
