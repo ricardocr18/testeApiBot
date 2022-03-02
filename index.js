@@ -15,16 +15,16 @@ let totalDepedido = 0;
 let totalDeConsume = 0;
 let opcao = ""
 
-if (novopedidopizza == 'Sim') {
-    db = "Novo Pedido"
-    totalDepedido = 2
-    totalDeConsume = 40
-    opcao = novopedidopizza
-} else {
-    db = "Bora API"   
-    totalDepedido = 1
-    totalDeConsume = 20    
-}
+// if (novopedidopizza == 'Sim') {
+//     db = "Novo Pedido"
+//     totalDepedido = 2
+//     totalDeConsume = 40
+//     opcao = novopedidopizza
+// } else {
+//     db = "Bora API"   
+//     totalDepedido = 1
+//     totalDeConsume = 20    
+// }
 
 //buscar dadoss
 app.get('/', (req, res) => {
@@ -35,6 +35,17 @@ app.get('/', (req, res) => {
 app.post('/teste', (req, res) => {
     console.log(req.body) 
     res.send(JSON.stringify( inbenta ))  
+
+    if (novopedidopizza == 'Sim') {
+        db = "Bora API Sim"
+        totalDepedido = 2
+        totalDeConsume = 40
+        opcao = novopedidopizza
+    } else {
+        db = "Bora API"   
+        totalDepedido = 1
+        totalDeConsume = 20    
+    }
     
     
 })
