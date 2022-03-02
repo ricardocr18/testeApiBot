@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 //inserir dados
 app.post('/teste', (req, res) => {
 
-    res.send(JSON.stringify( inbenta ))
+    res.send(JSON.stringify( inbenta))
     return
 })
 
