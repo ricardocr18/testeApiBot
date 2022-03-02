@@ -46,33 +46,30 @@ app.get('/', (req, res) => {
 
 //inserir dados
 app.post('/teste', (req, res) => {
-    console.log(req.body.novopedidopizza)
-    res.send(JSON.stringify(inbenta))
+    console.log("Aqui é uma variavel: " + (req.body.novopedidopizza))
+    res.send(JSON.stringify(inbenta))   
 
-        
-
-    let inbenta = {
-        "status": "success",
-        "chatbot_response": db,
-        "raw_output": [
-            {
-                "output_variable": "totalDepedido",
-                "output_result": totalDepedido
-            },
-            {
-                "output_variable": "totalDeConsume",
-                "output_result": totalDeConsume
-            },
-            {
-                "output_variable": "opcao",
-                "output_result": opcao
-            }
-        ]
-
-    }
-
-
+      
 })
+
+let inbenta = {
+    "status": "success",
+    "chatbot_response": db,
+    "raw_output": [
+        {
+            "output_variable": "totalDepedido",
+            "output_result": totalDepedido
+        },
+        {
+            "output_variable": "totalDeConsume",
+            "output_result": totalDeConsume
+        },
+        {
+            "output_variable": "opcao",
+            "output_result": opcao
+        }
+    ]
+}
 
 
 
