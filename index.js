@@ -9,6 +9,11 @@ app.use(express.urlencoded({ extended: true })) // Aqui eu pego as informsaçõe
 
 const port = process.env.PORT || 3000
 
+let db = ""
+    let novopedidopizza = "";
+    let totalDepedido = 0;
+    let totalDeConsume = 0;
+    let opcao = ""
 
 
 // if (novopedidopizza == 'Sim') {
@@ -32,12 +37,7 @@ app.post('/teste', (req, res) => {
     console.log(req.body)
     res.send(JSON.stringify(inbenta))
 
-    let db = ""
-    let novopedidopizza = "";
-    let totalDepedido = 0;
-    let totalDeConsume = 0;
-    let opcao = ""
-
+    
     if (novopedidopizza == 'Sim') {
         db = "Bora API Sim"
         totalDepedido = 2
