@@ -43,6 +43,7 @@ app.post('/teste', (req, res) => {
             db = "Ok, novo Pedido 😊"
             totalDepedido = 2
             tipoPizzaB = req.body.opcao_pizza
+            tipoPizza = req.body.opcao_pizza
             totalDeConsume = 40
             opcao = req.body.novopedidopizza
         } else {
