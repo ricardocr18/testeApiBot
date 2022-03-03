@@ -36,8 +36,19 @@ const port = process.env.PORT || 3000
 app.post('/teste', (req, res) => {
     //console.log(req.body)
     //console.log("Aqui é uma variavel: " + (req.body.opcao_pizza))  
+  
 
-    opcao = (req.body.opcao_pizza)
+    if (req.body.novopedidopizza == 'Sim') {
+            db = "Novo Pedido"
+            totalDepedido = 2
+            totalDeConsume = 40
+            opcao = req.body.novopedidopizza
+        } else {
+            db = "Não quero mais Pizza"   
+            totalDepedido = 1
+            totalDeConsume = 20   
+            opcao = req.body.novopedidopizza 
+        }
     
     let inbenta = { 
         "status": "success",
