@@ -68,11 +68,7 @@ app.post('/teste', (req, res) => {
             {
                 "output_variable": "opcao",
                 "output_result": opcao
-            },
-            {
-                "output_variable": "tipoPizzaB",
-                "output_result": tipoPizzaB
-            }
+            }            
         ]
     }  
     
