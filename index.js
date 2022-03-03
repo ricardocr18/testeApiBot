@@ -47,7 +47,7 @@ app.post('/teste', (req, res) => {
         } else {
             db = "Ok, vamos continuar 😊"  
             totalDepedido = 3
-            tipopizza = req.body.opcaopizza
+            tipoPizza = req.body.opcaopizza
             totalDeConsume = 20   
             opcao = req.body.novopedidopizza 
         }
@@ -62,7 +62,7 @@ app.post('/teste', (req, res) => {
             },
             {
                 "output_variable": "totalDeConsume",
-                "output_result": tipopizza
+                "output_result": tipoPizza
             },
             {
                 "output_variable": "opcao",
