@@ -61,7 +61,7 @@ app.post('/teste', (req, res) => {
                 "output_result": totalDepedido
             },
             {
-                "output_variable": "totalDeConsume",
+                "output_variable": "tipoPizza",
                 "output_result": tipoPizza
             },
             {
